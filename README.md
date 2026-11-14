@@ -1,5 +1,18 @@
 # Aqua Monitor
 
+## Definição do projeto
+
+- **Grupo:** Grupo 2 — 5º Inteligência Artificial.
+- **Integrantes:** Isaac Nilson Viana, Gabriel de Lima Jurack, Matheus Arthur Bachmann, Kauany Andressa Bloemer e Dalton Hartmann.
+- **Problema em uma frase:** a falta de monitoramento acessível e contínuo atrasa a identificação de alterações na qualidade da água e a resposta de quem depende dela.
+- **Usuário primário:** pessoa ou equipe responsável por acompanhar um ponto de água em uma pequena comunidade, escola ou projeto local.
+- **Frase de corte do MVP:** o Aqua Monitor recebe leituras de um ESP32 por Bluetooth, mostra pH, turbidez, TDS e oxigênio dissolvido, sinaliza valores fora dos limites configurados e guarda o histórico no próprio celular.
+- **ODS conectados:** [ODS 3 — Saúde e Bem-Estar](docs/01-problema-e-ods.md#ods-3--saúde-e-bem-estar), [ODS 6 — Água Potável e Saneamento](docs/01-problema-e-ods.md#ods-6--água-potável-e-saneamento) e [ODS 14 — Vida na Água](docs/01-problema-e-ods.md#ods-14--vida-na-água).
+
+**Entrega da atividade:** [documentação de definição](docs/), [arquitetura e três canvas](docs/04-arquitetura.md), [decisão de arquitetura](docs/decisoes/ADR-001-monitoramento-local-ble.md), [diário da aula](docs/diario/aula-06.md), [mapa ODS × tecnologia](docs/assets/mapa-ods-tecnologia.png) e [quadro original no Miro](https://miro.com/app/board/uXjVH2GjmwE=/?share_link_id=390171388875). O código executável está em [`lib/`](lib/) e o firmware de exemplo em [`firmware/`](firmware/).
+
+> O aplicativo oferece acompanhamento e alertas indicativos. As leituras de sensores sem calibração e análise laboratorial não certificam potabilidade.
+
 ## Instalar no Android
 
 [Baixar o APK da versao mais recente](https://github.com/IsaacNilsonViana/aqua-monitor/releases/latest/download/aqua-monitor-v1.3.0.apk)
