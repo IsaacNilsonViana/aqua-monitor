@@ -1,0 +1,33 @@
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+// Alguns plugins BLE antigos fixam compileSdk 33 internamente. O aplicativo
+// usa 36; alinhar os modulos evita conflito com as bibliotecas AndroidX atuais.
+subprojects {
+    if (name != "app") {
+        afterEvaluate { subproject ->
+            if (subproject.hasProperty("android")) {
+                subproject.android {
+                    compileSdk = 36
+                }
+            }
+        }
+    }
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+
